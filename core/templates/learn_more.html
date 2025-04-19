@@ -1,0 +1,386 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn More | GitCollab</title>
+  <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Custom Styles -->
+  <style>
+    :root {
+      --bg-primary: #0d1117;
+      --bg-secondary: #161b22;
+      --bg-tertiary: #21262d;
+      --text-primary: #f0f6fc;
+      --text-secondary: #c9d1d9;
+      --text-muted: #8b949e;
+      --accent-primary: #58a6ff;
+      --accent-secondary: #1f6feb;
+      --border-color: #30363d;
+      --code-bg: #1e2329;
+      --code-inline-bg: #2d333b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .header {
+      padding: 2.5rem 0 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+
+    .doc-section {
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      overflow: hidden;
+      background-color: var(--bg-secondary);
+    }
+
+    .section-header {
+      padding: 1rem 1.5rem;
+      background-color: var(--bg-tertiary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      transition: background-color 0.2s ease;
+    }
+
+    .section-header:hover {
+      background-color: rgba(33, 38, 45, 0.8);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .icon-toggle {
+      transition: transform 0.3s ease;
+      color: #238636; 
+    }
+
+    .icon-toggle.rotate {
+      transform: rotate(90deg);
+    }
+
+    .collapsible-content {
+      display: none;
+      padding: 1.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .collapsible-content.active {
+      display: block;
+    }
+
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: var(--accent-primary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--accent-secondary);
+    }
+
+    pre {
+      background-color: var(--code-bg);
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 1rem 0;
+      border: 1px solid var(--border-color);
+    }
+
+    code {
+      background-color: var(--code-inline-bg);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 0.9em;
+    }
+
+    pre code {
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
+      color: var(--text-secondary);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 2rem;
+      }
+      
+      .subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .section-header {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">📘 GitCollab User Guide</h1>
+      <p class="subtitle">Master GitCollab in minutes! This guide explains how to use the platform effectively.</p>
+    </header>
+
+    <main>
+      <!-- Getting Started -->
+      <div class="doc-section">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title">
+            <span>🧭 Getting Started</span>
+          </div>
+          <span class="icon-toggle">▶</span>
+        </div>
+        <div class="collapsible-content">
+          <ul>
+            <li>Click <strong>"Sign in with GitHub"</strong> on the homepage.</li>
+            <li>Authorize GitCollab to access your GitHub data.</li>
+            <li>You'll be redirected to your personal dashboard.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Creating Project -->
+      <div class="doc-section">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title">
+            <span>🚀 Creating and Listing a Project</span>
+          </div>
+          <span class="icon-toggle">▶</span>
+        </div>
+        <div class="collapsible-content">
+          <ol>
+            <li>Click <strong>"Create Project"</strong>.</li>
+            <li>Fill the form with:
+              <ul>
+                <li>Valid GitHub repo URL (must belong to you)</li>
+                <li>Project description, skills needed, contributors count</li>
+                <li>Donation links (optional)</li>
+              </ul>
+            </li>
+            <li>Click submit. Your project will be reviewed and listed.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Joining as Collaborator -->
+      <div class="doc-section">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title">
+            <span>👥 Joining as a Collaborator</span>
+          </div>
+          <span class="icon-toggle">▶</span>
+        </div>
+        <div class="collapsible-content">
+          <ol>
+            <li>Browse the homepage and find interesting projects.</li>
+            <li>Click the project to view details.</li>
+            <li>Click <strong>"Request to Contribute"</strong>.</li>
+            <li>Wait for project owner's approval.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Skill Matching -->
+      <div class="doc-section">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title">
+            <span>🔍 Skill-Based Project Matching</span>
+          </div>
+          <span class="icon-toggle">▶</span>
+        </div>
+        <div class="collapsible-content">
+          <ul>
+            <li>Update your profile with your skills.</li>
+            <li>Your homepage will show recommended projects.</li>
+            <li>Skill-matching results are cached for 1 hour.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- GitHub Token -->
+      <div class="doc-section">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title">
+            <span>🔐 Adding Your GitHub Token</span>
+          </div>
+          <span class="icon-toggle">▶</span>
+        </div>
+        <div class="collapsible-content">
+          <p>For advanced features like viewing forks and opening issues, a personal access token is recommended.</p>
+          <h3>How to Generate:</h3>
+          <ol>
+            <li>Go to <a href="https://github.com/settings/tokens" target="_blank">GitHub Tokens</a></li>
+            <li>Click <strong>"Generate new token (classic)"</strong></li>
+            <li>Select scopes: <code>repo</code>, <code>read:user</code>, <code>user:email</code></li>
+          </ol>
+
+          <h3>How to Add:</h3>
+          <ul>
+            <li>Go to your GitCollab Profile > Edit.</li>
+            <li>Paste the token in the token field.</li>
+            <li>It's securely masked and stored.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tips -->
+      <div class="doc-section">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title">
+            <span>💡 Tips & Notes</span>
+          </div>
+          <span class="icon-toggle">▶</span>
+        </div>
+        <div class="collapsible-content">
+          <ul>
+            <li>Only your GitHub-owned repos can be listed.</li>
+            <li>More advanced filtering and search is in progress.</li>
+            <li>Skill auto-matching and auto-approval features coming soon.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Live App -->
+      <div class="doc-section">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title">
+            <span>🌐 Live App</span>
+          </div>
+          <span class="icon-toggle">▶</span>
+        </div>
+        <div class="collapsible-content">
+          <p>Check out the app here: <a href="https://yourprojectname.onrender.com" target="_blank">GitCollab Live</a></p>
+        </div>
+      </div>
+
+      <!-- Contributing -->
+      <div class="doc-section">
+        <div class="section-header" onclick="toggleSection(this)">
+          <div class="section-title">
+            <span>🛠️ Contributing</span>
+          </div>
+          <span class="icon-toggle">▶</span>
+        </div>
+        <div class="collapsible-content">
+          <pre><code># Clone the repo
+git clone https://github.com/abhirajadhikary06/GitCollab.git
+
+cd GitCollab
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+# Apply migrations and run
+python manage.py migrate
+python manage.py runserver</code></pre>
+          <p>Open-source enthusiasts are welcome to contribute! 🤝</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 GitCollab - Connecting developers with open-source projects</p>
+    </footer>
+  </div>
+
+  <!-- JS for Collapsibles -->
+  <script>
+    function toggleSection(header) {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector('.icon-toggle');
+      content.classList.toggle('active');
+      icon.classList.toggle('rotate');
+    }
+
+    // Optional: Open the first section by default
+    document.addEventListener('DOMContentLoaded', function() {
+      const firstSection = document.querySelector('.section-header');
+      if (firstSection) {
+        toggleSection(firstSection);
+      }
+    });
+  </script>
+</body>
+</html>

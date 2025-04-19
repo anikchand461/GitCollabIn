@@ -1,0 +1,13 @@
+django
+python-dotenv
+social-auth-app-django
+gunicorn
+whitenoise
+markdown
+psycopg2-binary
+django-environ
+gunicorn
+whitenoise
+django-cors-headers
+django-redis
+django-debug-toolbar
