@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-e_p3+kfp+te8n-#wuwt$9616vz081=s4e4f97k9_s-u=gl8152
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['gitcollab-pmco.onrender.com']
+ALLOWED_HOSTS = ['gitcollabin.onrender.com']
 
 
 # Application definition
