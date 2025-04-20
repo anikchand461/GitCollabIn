@@ -1,89 +1,151 @@
-# GitCollab
+GitCollabIn
 
-## Project Description
+Project Description
 
-The Gitcollab is a web application designed to connect developers, foster collaboration, and streamline open-source project management. Integrated with GitHub, it allows users to share and contribute to projects while matching their skills with relevant opportunities.
+GitCollabIn is a web application designed to connect developers, foster collaboration, and streamline open-source project management. Integrated with GitHub, it allows users to share and contribute to projects while matching their skills with relevant opportunities.
 
 Key features include:
-- Skill-based project matching
-- Contributor request handling
-- GitHub OAuth login
-- Project listing and discovery
-- Custom user profiles
+
+🔍 Skill-based project matching
+
+🤝 Contributor request handling
+
+🔐 GitHub OAuth login
+
+🧭 Project listing and discovery
+
+🧑‍💻 Custom user profiles
+
 
 Built with Django, Bulma CSS, and JavaScript, and deployed via Render, it offers a scalable, modern, and developer-friendly experience.
 
----
-
-## How to List Your Project
-
-1. Log In using your GitHub account.
-2. Click “Create Project” on the homepage/dashboard.
-3. Fill out the form:
-   - GitHub repository URL (must match your username)
-   - Requirements description
-   - Number of contributors needed
-   - Desired skills
-   - Optional: Buy Me a Coffee, Patreon, or PayPal support
-4. Submit the project.
-5. Your project appears in the global list after validation.
 
 ---
 
-## How Collaborators Join Projects
+How to List Your Project 🚀
 
-1. Browse the homepage for interesting projects.
-2. Click on a project to view details.
-3. Submit a contributor request (visible if allowed).
-4. The project owner reviews and accepts/rejects your request.
-5. Once accepted, you begin collaboration.
+1. 🔐 Log In using your GitHub account.
 
----
 
-## How Everyone Can View Projects
+2. ➕ Click “Create Project” on the homepage/dashboard.
 
-- Visit the home page (/) to see all public projects.
-- Projects include descriptions, skills needed, and contributor slots.
-- Cached GitHub data (README, forks) enhances performance.
-- Search & filter (planned) to help users find matching projects easily.
 
----
+3. 📝 Fill out the form:
 
-## How to Get Your Matching Projects
+🔗 GitHub repository URL (must match your username)
 
-1. Log in and update your skills in your profile.
-2. A “Matched Projects” section appears on the home page.
-3. Uses a skill-matching algorithm.
-4. Matching results are cached for 1 hour for better speed.
+📄 Requirements description
 
----
+👥 Number of contributors needed
 
-## Automating Collaborator Requests
+💡 Desired skills
 
-- Requests are auto-stored as “pending”.
-- Project owners receive a notification.
-- Owner manually accepts or rejects requests.
-- Future: auto-accept based on skill/reputation using Celery tasks/signals.
+☕ Optional: Buy Me a Coffee, Patreon, or PayPal support
+
+
+
+4. ✅ Submit the project.
+
+
+5. 📌 Your project appears in the global list after validation.
+
+
+
 
 ---
 
-## Add Your GitHub Classic Token
+How Collaborators Join Projects 👨‍💻👩‍💻
 
-1. Log in and go to Edit Profile.
-2. Paste your GitHub Classic Token (40 characters).
-3. Token is masked for security.
-4. Used for enhanced API access (e.g., forks, issues).
+1. 🔎 Browse the homepage for interesting projects.
+
+
+2. 📘 Click on a project to view details.
+
+
+3. ✉️ Submit a contributor request (visible if allowed).
+
+
+4. 🧾 The project owner reviews and accepts/rejects your request.
+
+
+5. ✅ Once accepted, you begin collaboration.
+
+
+
 
 ---
 
-## How to Clone This Repository
+How Everyone Can View Projects 🌐
 
-```bash
+🏠 Visit the home page (/) to see all public projects.
+
+📋 Projects include descriptions, skills needed, and contributor slots.
+
+⚡ Cached GitHub data (README, forks) enhances performance.
+
+🔍 Search & filter (planned) to help users find matching projects easily.
+
+
+
+---
+
+How to Get Your Matching Projects 🧠
+
+1. 🔐 Log in and update your skills in your profile.
+
+
+2. ✅ A “Matched Projects” section appears on the home page.
+
+
+3. ⚙️ Uses a skill-matching algorithm.
+
+
+4. ⏱️ Matching results are cached for 1 hour for better speed.
+
+
+
+
+---
+
+Automating Collaborator Requests 🤖
+
+⏳ Requests are auto-stored as “pending”.
+
+🔔 Project owners receive a notification.
+
+🧾 Owner manually accepts or rejects requests.
+
+📈 Future: auto-accept based on skill/reputation using Celery tasks/signals.
+
+
+
+---
+
+Add Your GitHub Classic Token 🔑
+
+1. 🔐 Log in and go to Edit Profile.
+
+
+2. 📋 Paste your GitHub Classic Token (40 characters).
+
+
+3. 🛡️ Token is masked for security.
+
+
+4. 🚀 Used for enhanced API access (e.g., forks, issues).
+
+
+
+
+---
+
+How to Clone This Repository 💻
+
 # Clone the repo
-git clone https://github.com/abhirajadhikary06/GitCollab.git
+git clone https://github.com/abhirajadhikary06/GitCollabIn.git
 
 # Navigate into the repo
-cd GitCollab
+cd GitCollabIn
 
 # Create a virtual environment
 python -m venv venv
@@ -105,17 +167,17 @@ python manage.py migrate
 # Start the server
 python manage.py runserver
 
-```
+
 ---
 
-## Live Link
+Live Link 🔗
 
 https://yourprojectname.onrender.com
 
 
 ---
 
-## Tech Stack
+Tech Stack 🛠️
 
 Django: Backend framework for APIs and database interaction
 
@@ -131,7 +193,9 @@ Render: Hosting and deployment
 
 ---
 
-## Contribution
+Contribution ❤️
 
-Contributions are welcome! Clone the repo, explore the features, and help build the future of open-source collaboration.
-
+Contributions are welcome!
+🧪 Clone the repo,
+🛠️ Explore the features,
+✨ Help build the future of open-source collaboration!
