@@ -81,7 +81,7 @@ Built with **Django**, **Bulma CSS**, and **JavaScript**, and deployed via **Ren
 
 ```bash
 # Clone the repo
-git clone https://github.com/abhirajadhikary06/GitCollabIn.git
+git clone https://github.com/anikchand461/GitCollabIn.git
 
 # Navigate into the repo
 cd GitCollabIn
@@ -111,7 +111,7 @@ python manage.py runserver
 
 Live Link 🔗
 
-https://yourprojectname.onrender.com
+https://gitcollabin.onrender.com
 
 
 ---
